@@ -7,9 +7,6 @@ Get posts and comments from db pages and store them into MySQL DB. It is based o
 	- You can create tables according my template using sql_tables.sql
 	- Start Having fun
 ##Examples
-fb pages example
 ![alt text](screenshots/sources.png "fb pages example")
-page posts example
 ![alt text](screenshots/posts.png "page posts example")
-post comments example
 ![alt text](screenshots/comments.png "post comments example")
