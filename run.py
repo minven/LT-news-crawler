@@ -2,7 +2,6 @@ import pandas as pd
 import FbApi
 import MysqlOperations as ms
 
-
 def search_news_fb_sources():
 	'''
 	Read LT_newspapers names from csv LT_newspapers.csv
@@ -52,6 +51,7 @@ def get_post_from_pages(source_table,results_table):
 				elif insertion_rez == "dublication":
 					break
 		print("{} new posts were inserted" .format(posts_numb))
+
 def get_comments_from_posts(source_table,results_table):
 	FB_Instance = FbApi.FbApi()
 	mysql_instance = ms.MysqlOperations()
@@ -86,4 +86,3 @@ def get_comments_from_posts(source_table,results_table):
 if __name__ == "__main__":
 	#get_post_from_pages("news_sources","news_posts")
 	get_comments_from_posts("news_posts","comments")
-#pip install -r example-requirements.txt

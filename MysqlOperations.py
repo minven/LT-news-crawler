@@ -1,7 +1,6 @@
 import pymysql.cursors
 import yaml
 
-
 class MysqlOperations:
 	def __init__(self):
 		with open("config.yml", 'r') as ymlfile:
@@ -19,6 +18,7 @@ class MysqlOperations:
 		cursor.execute(sql_query)
 		result = cursor.fetchall()
 		return result
+
 	def insert_entry_to_posts(self,table_name,entry):
 		'''
 	    page_id varchar(50) not null,
@@ -44,6 +44,7 @@ class MysqlOperations:
 		else:
 			self.connection.commit()
 			return "success"
+
 	def insert_entry_to_comments(self,table_name,entry):
 		'''
 	    post_id varchar(50) not null,
@@ -74,6 +75,7 @@ class MysqlOperations:
 		else:
 			self.connection.commit()
 			return "success"
+
 	def update_table(self,table_name,s_key,s_val,w_key,w_value):
 		'''
 		update mysql table
@@ -87,6 +89,7 @@ class MysqlOperations:
 			print("comment_numb update error")
 		else:
 			self.connection.commit()
-			print("{} comments where inserted successfully\n" . format(s_val))	
+			print("{} comments where inserted successfully\n" . format(s_val))
+			
 if __name__ == "__main__":
 	pass
