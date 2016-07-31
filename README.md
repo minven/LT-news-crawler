@@ -8,5 +8,7 @@ Get posts and comments from db pages and store them into MySQL DB. It is based o
 	- Start Having fun
 ##Examples
 ![alt text](screenshots/sources.png "fb pages example")
+
 ![alt text](screenshots/posts.png "page posts example")
+
 ![alt text](screenshots/comments.png "post comments example")
