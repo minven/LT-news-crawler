@@ -1,0 +1,5 @@
+auth_key: fb_auth_key
+mysql_login:
+  password: db_password
+  charset: db_charset
+  db_name: table_name
