@@ -38,11 +38,11 @@ class FbApi:
 		return "https://graph.facebook.com/v2.7/search?q={}&type=page&access_token={}" .\
 		format(urllib.parse.quote(name),auth_key)
 	def posts_url(self,page_id,auth_key):
-		return "https://graph.facebook.com/v2.7/{}/posts?fields=message,actions,link,created_time&limit=100&access_token={}" .\
-		format(page_id,auth_key)
+		return "https://graph.facebook.com/v2.7/{}/posts?fields=message,actions,link,created_time"\
+		"&limit=100&access_token={}" .format(page_id,auth_key)
 	def post_comments_url(self,post_id,auth_key):
 		return "https://graph.facebook.com/v2.7/{}?fields=comments.limit(500)" \
-		"%7Blike_count,message,created_time,application,comment_count,from,user_likes%7D&access_token={}".\
-		format(post_id,auth_key)
+		"%7Blike_count,message,created_time,application,comment_count,from,user_likes%7D"\
+		"&access_token={}".format(post_id,auth_key)
 if __name__ == "__main__":
 	pass
